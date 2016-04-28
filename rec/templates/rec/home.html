@@ -1,0 +1,40 @@
+{% load staticfiles %}  
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static 'rec/home.css' %}" />
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<body onload="window.resizeTo(50,50)" style="background:url({%static 'rec/bd.jpg'%}); no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity:0.8;">
+  <h1 style="color:white;text-align:center;">Recommended List</h1><div>
+   
+  
+
+<div style="margin-left:45%;">
+   <a href="\rec?uid={{uid}}" class="btn btn-info btn-lg" style="background:black;">
+          <span class="glyphicon glyphicon-refresh"></span> Refresh
+        </a></div>
+		<p>
+		</p>
+ <div style="margin-left:31%;">
+
+  <ul>
+    <br/>
+  {% for r in recomm %}
+    <li>
+      <!--<img src="download.png" width="42" height="42"  />-->
+      <h3 class="SN">{{r.name}}</h3><h4>{{r.artist}}</h4><a href="/rec/each?sid={{r.song_id}}&uid={{uid}}" class="b2">Listen</a>
+      <p><br/></p>
+  <hr></hr>
+  {% endfor %}
+  <ul>s
+      
+</div>
+
+</body>
+</html>

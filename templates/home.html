@@ -1,0 +1,17 @@
+{% load staticfiles %}  
+<body onload="window.resizeTo(50,50)" style="background:url({% static 'rec/calendar.png' %}); no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+<h1>Login</h1>
+
+<form action="{% url 'rec:uauth' %}" method="post">
+{% csrf_token %}
+Username : 
+<input type="text" name="uid"><br/><br/>
+Password :&nbsp;
+<input type="password" name="password"><br/><br/>
+<input type="submit">
+</form>
+</body>

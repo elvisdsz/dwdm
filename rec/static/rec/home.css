@@ -1,0 +1,78 @@
+.html1 { 
+  color:blue;
+  background: url(C:\Users\Mahe\Desktop\DWDM proj\calendar.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+* {margin: 0; padding: 0;}
+.centered-thing {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div {
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  width: 500px;
+}
+
+.SN{
+  font: bold px/1.5 Helvetica, Verdana, sans-serif;
+  color:white;
+}
+.b2 {
+
+    
+	opacity:0.9;
+    color: white;
+	font-size: 25px;
+   float:right;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.b3 {
+
+    
+	opacity:0.8;
+    color: white;
+	font-size: 25px;
+   
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.b2:hover {
+ 
+    
+	color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+li img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+li p {
+  font: 200 20px/1.5 Georgia, Times New Roman, serif;
+  color:white;
+}
+
+li {
+  padding: 10px;
+  overflow: auto;
+  opacity:0.75;
+}
+
+li:hover {
+
+box-shadow: 2px 2px 40px #888888;
+ opacity:1.0;
+  cursor: pointer;
+}

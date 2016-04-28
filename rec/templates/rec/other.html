@@ -1,0 +1,53 @@
+{% load staticfiles %}  
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+ 
+ <link href="{% static 'rec/home.css' %}" rel="stylesheet">
+  </head>
+<body onload="window.resizeTo(50,50)" style="background:url({% static 'rec/calendar.png' %}); no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  <!--<div class ="center-block" style="width:250px;margin-top:250px;margin-left:800px;">  -->
+  <div class="center">
+  <a href="\rec\?uid={{uid}}" class="btn btn-info btn-lg" style="color:white;float:right;background-color:transparent;border-color:transparent;">
+          <span class="glyphicon glyphicon-back"></span> Back
+        </a>
+  
+  
+  <div text-align="center">
+  <h2 style="color:white;">{{song.name}}</h2>
+  <h3 style="color:white;"><span style="color:#c1c0c0;">by </span> {{song.artist}}</h3>
+
+  <audio style="margin-left:40%;" src="https://freemusicarchive.org/music/no_curator/G8/Run_With_It/G8_-_11_-_Sidewalk_To_Somewhere.mp3" controls="controls">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div style="margin-left:45%;">  
+   <a href="{{song.url}}" class="btn btn-info btn-lg" style="background:black;">
+          <span class="glyphicon glyphicon-download-alt"></span> Download Song
+    </a>
+  </div>
+
+  <!--
+  <iframe class="centered-thing" width="480" height="390" position:"center" src="https://www.youtube.com/embed/hqiNL4Hn04A" frameborder="0" allowfullscreen></iframe> 
+  -->
+  </div>
+  <a href="/rec/vote?sid={{song.song_id}}&uid={{uid}}&vote=1" class="btn btn-info btn-lg" style="background-color:black;">
+          <span class="glyphicon glyphicon-thumbs-up"></span> Like
+        </a>
+    
+      <a href="/rec/vote?sid={{song.song_id}}&uid={{uid}}&vote=-1" class="btn btn-info btn-lg" style="float:right;background-color:black;">
+          <span class="glyphicon glyphicon-thumbs-down"></span> Dislike
+        </a>
+    
+  <div>
+</body>
+</html>
